@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  timezone: MyString
+  day_of_week: MyString
+  available_at: 2018-10-16 15:35:06
+  available_until: 2018-10-16 15:35:06
+
+two:
+  name: MyString
+  timezone: MyString
+  day_of_week: MyString
+  available_at: 2018-10-16 15:35:06
+  available_until: 2018-10-16 15:35:06

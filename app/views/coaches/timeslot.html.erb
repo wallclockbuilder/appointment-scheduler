@@ -1,0 +1,8 @@
+<h1>You successfully made a booking</h1>
+<div>
+  <%="You have booked coach #{@coach.name} from #{@timeslot.day_of_week} #{@timeslot.from.strftime("%r")} to #{@timeslot.day_of_week} #{@timeslot.to.strftime("%r")} #{@coach.availabilities.first.timezone}"%>
+</div>
+
+<p>
+  <%=link_to "Make another Booking", coaches_book_path%>
+</p>

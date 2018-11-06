@@ -1,0 +1,31 @@
+<h1>Book a Coach</h1>
+<table style="width:100%">
+  <tr style="text-align: justify">
+    <th>Name</th>
+    <th>Timezone</th>
+    <th>Day of Week</th>
+    <th>Available From</th>
+    <th>Available Until</th>
+  </tr>
+  <%@coaches.each do |coach|%>
+    <tr>
+      <td><%= coach.name %></td>
+      <%coach.availabilities.each do |availability|%>
+        <%availability.timeslots.each do |timeslot|%>
+          <%if timeslot.booked == false%>
+            <tr>
+              <td> - </td>
+              <td><%= availability.timezone %></td>
+              <td><%= timeslot.day_of_week %></td>
+              <td><%= timeslot.from.strftime("%r") %></td>
+              <td>
+                <%= timeslot.to.strftime("%r") %>
+                <%= link_to 'Book', coaches_timeslot_path(timeslot: {id: timeslot.id, coach_name: coach.name}).to_param, method: :post %>
+              </td>
+            </tr>
+          <%end%>
+        <%end%>
+      <%end%>
+    </tr>
+  <%end%>
+</table>

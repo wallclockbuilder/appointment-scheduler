@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  available_from: 2018-10-16 17:56:12
+  available_to: 2018-10-16 17:56:12
+
+two:
+  available_from: 2018-10-16 17:56:12
+  available_to: 2018-10-16 17:56:12
